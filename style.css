@@ -127,8 +127,8 @@ body {
 #snow {
     width: 100%;
     height: 100%;
-    background-image: url('/snow/snow_1.png'), url('/snow/snow_2.png'),
-        url('/snow/snow_3.png');
+    background-image: url('./snow/snow_1.png'), url('./snow/snow_2.png'),
+        url('./snow/snow_3.png');
     animation: snow 20s linear infinite;
 }
 
