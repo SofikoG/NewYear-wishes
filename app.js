@@ -26,7 +26,12 @@ document.addEventListener('click', () => {
         }, 500)
         counter++
     } else if (counter == 1) {
-        closedEnvelope.style.top = '29vh'
+        if (document.body.clientWidth <= 760) {
+            closedEnvelope.style.top = '24.5vh'
+        } else {
+            closedEnvelope.style.top = '29vh'
+        }
+
         setTimeout(() => {
             closedEnvelope.style.opacity = '0'
             openedEnvelope.style.opacity = '1'
