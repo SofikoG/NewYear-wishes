@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    background-color: #dae8fc;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.modalWindow,
+.wishWindow {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.modalContent h1,
+.wishtext h1 {
+    padding: 20px;
+
+    background-color: #fafafa;
+    border-radius: 20px;
+}
+.wishtext h1 {
+    min-width: 360px;
+    max-width: 580px;
+}
+
+.snow {
+    position: absolute;
+    bottom: 0;
+    background-color: #fafafa;
+    width: 100%;
+    height: 20vh;
+}
+
+.christmasTree {
+    position: absolute;
+    bottom: 10vh;
+    left: 10%;
+    width: 20%;
+}
+
+.closedEnvelope,
+.openedEnvelope {
+    position: absolute;
+    top: 10vh;
+    left: 5%;
+    width: 30%;
+    transition: all 0.5s ease-in-out;
+}
+
+.openedEnvelope {
+    opacity: 0;
+}
+
+.SantaClaus {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 120%;
+    transform: translate(50%, 40%);
+}
+
+@media screen and (max-width: 760px) {
+    .christmasTree {
+        width: 40%;
+        left: 3%;
+    }
+    .SantaClaus {
+        width: 120%;
+        transform: translate(50%, 30%);
+    }
+    .closedEnvelope,
+    .openedEnvelope {
+        top: 15vh;
+        width: 50%;
+    }
+    .wishtext h1 {
+        max-width: 320px;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .christmasTree {
+        width: 40%;
+        left: 3%;
+    }
+    .SantaClaus {
+        width: 160%;
+    }
+    .closedEnvelope,
+    .openedEnvelope {
+        top: 15vh;
+        width: 50%;
+    }
+
+    .closedEnvelope {
+        top: 10vh;
+    }
+}
+
+.snowContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#snow {
+    width: 100%;
+    height: 100%;
+    background-image: url('/snow/snow_1.png'), url('/snow/snow_2.png'),
+        url('/snow/snow_3.png');
+    animation: snow 20s linear infinite;
+}
+
+@keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
